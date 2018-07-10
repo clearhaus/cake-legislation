@@ -1,0 +1,86 @@
+\documentclass[a4paper, oneside, article]{memoir}
+
+\usepackage[T1]{fontenc}
+
+% Handle references with nicely with \cref
+\usepackage{hyperref}
+\hypersetup{linkcolor=black, colorlinks=true}
+\usepackage{cleveref}
+
+% Palatino is a nice font.
+\usepackage[sc]{mathpazo}
+
+\usepackage[top=1.0in, bottom=1in, left=1.5in, right=1.5in]{geometry}
+
+% Auto-space after \emph{cake}
+\usepackage{xspace}
+
+% List continuation counter 'to be continued'
+\newcounter{tbc}
+
+\begin{document}
+\thispagestyle{empty} % No page number on first page
+\begin{center}
+  \textsc{\huge Clearhaus Ceremonial Cake Legislation}
+  \\
+  {\footnotesize version 0.2}
+\end{center}
+
+\chapter{Legislative basics}
+
+\begin{enumerate}[§ 1]
+  \item This legislation applies to all employees of Clearhaus {\small A/S} and
+    any subsidiary companies in Denmark, as well as abroad.
+
+  \item The term \emph{Cake} as used in this document may be
+    interpreted in a literal sense --- i.e.\ cake --- as well as pastry, ice
+    cream et.\ al.
+
+  \item Foodstuff not containing an appropriate amount of sugar or with an
+    unacceptably low amount of calories, may not be interpreted as
+    \emph{cake}.
+
+    Upon the judgement that \emph{cake} is not an acceptable term for the
+    offering, COR will be obligated to procure proper \emph{cake}.
+
+  \item \Cref{chp:circumstances} describes circumstances in which a traditional
+    offering of \emph{cake}{} is expected by the \emph{cake offering
+    responsible} (COR).  Individuals having undergone/undergoing any described
+    circumstance are referred to as \emph{cake offering responsible}. Notice
+    that \textbf{§12} is an exception.
+
+  % Save which enum we are on
+  \setcounter{tbc}{\value{enumi}}
+\end{enumerate}
+
+\chapter{Cake invoking circumstances}
+\label{chp:circumstances}
+\begin{enumerate}[§ 1]
+  % Restore enumerator count
+  \setcounter{enumi}{\value{tbc}}
+
+  \item Vacation
+  \item Birthday
+  \item Wedding
+  \item New car
+  \item Impregnation of any other individual (by \emph{COR}) or impregnation of
+    \emph{COR}.
+  \item Using incorrect recipient in sufficiently important email.
+  \item Having passed an exam, either final exam or getting the top grade.
+  \item Extreme weather (\emph{Cake responsible organization}) is Clearhaus A/S
+  \item The households gets a tax refund larger than 10,000 DKK\@.
+  \item Being hit by a door/walking into a door.
+  \item Winning a programming competition.
+  \item Returning from parental leave.
+  \item Full-time employment in Clearhaus A/S or any other company.
+  \item Appearance by photo or text in ISBN numbered publication.
+  \item Activating the fire/burglar alarm.
+  \item Broken bone(s).
+  \item Adding the Dinero mailing list to a newsletter.\\
+    {\tiny (What are you doing?? You work at Clearhaus!?)}
+  \item Shameful defeat (0--10) in table football.
+  \item Code deployment causing service outage.
+  \item Forgetting that you are on call.
+  \item Being made (partially) superfluous by automation.
+\end{enumerate}
+\end{document}
