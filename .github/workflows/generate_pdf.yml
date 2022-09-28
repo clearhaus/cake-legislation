@@ -1,0 +1,20 @@
+name: Generate PDF
+on:
+  - push
+jobs:
+  generate-pdf:
+    name: generate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Compile PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: legislation.tex
+
+      - name: Commit PDF
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update PDF
